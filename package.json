@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.quaiboatnidar",                              
+  "displayName": "Quai 10 Boat",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Just a small demo of a boat for the Quai10 workshop project.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_09_23_Quai10Boat.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
