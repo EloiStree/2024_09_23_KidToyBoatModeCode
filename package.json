@@ -8,8 +8,14 @@
   "description": "Just a small demo of a boat for the Quai10 workshop project.",                         
   "keywords": ["Script","Tool"],                       
   "dependencies":{},     
-  "relatedPackages":{},     
-  "samples" : [],     
+  "relatedPackages":{},
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Example d'utilisation de l'outil.",
+      "path": "Scene/Demo"
+    }
+  ],  
   "author" : {
 "name":"",
 "mail":"",
