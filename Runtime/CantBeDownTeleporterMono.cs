@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CantBeDownMono : MonoBehaviour
+public class CantBeDownTeleporterMono : MonoBehaviour
 {
     public Transform m_whatToObserve;
     public Transform m_savePoint;

@@ -32,6 +32,111 @@ Transform:
   - {fileID: 4893634397464121559}
   m_Father: {fileID: 8202830902864080924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &390613959713809307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3884106826537334623}
+  - component: {fileID: 3005269864495117202}
+  - component: {fileID: 7670829002197108683}
+  - component: {fileID: 9181353262877254201}
+  m_Layer: 0
+  m_Name: '20x20x20cm '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3884106826537334623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390613959713809307}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5354444741751607796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3005269864495117202
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390613959713809307}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7670829002197108683
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390613959713809307}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9181353262877254201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390613959713809307}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &666144343314811111
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +147,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4748523564616587914}
   - component: {fileID: 666060255019998965}
-  - component: {fileID: 1389291846092772922}
   m_Layer: 0
   m_Name: Move Boat Code
   m_TagString: Untagged
@@ -62,7 +166,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1571622989358060056}
   m_Father: {fileID: 5354444741751607796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &666060255019998965
@@ -83,68 +188,6 @@ MonoBehaviour:
   m_rotateSpeed: 60
   m_percentLeftRight: 0
   m_percentBackForward: 0
---- !u!114 &1389291846092772922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666144343314811111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003125c41cb2b5e4084cdec5576d90db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveBackForward: {fileID: -2419849938971563028, guid: 622899127b9dfba40a6cdb472acc71db,
-    type: 3}
-  m_rotateLeftRight: {fileID: -2765067249112102939, guid: 622899127b9dfba40a6cdb472acc71db,
-    type: 3}
-  m_singleJoystick: {fileID: -2390161907115449621, guid: 622899127b9dfba40a6cdb472acc71db,
-    type: 3}
-  m_percentBackForward11: 0
-  m_percentRotateLeftRight11: 0
-  m_onLeftRightPercentChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 666060255019998965}
-        m_TargetAssemblyTypeName: MoveBoatMono, be.elab.quaiboatnidar
-        m_MethodName: SetLeftRightPercent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_onBackForwardPercentChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 666060255019998965}
-        m_TargetAssemblyTypeName: MoveBoatMono, be.elab.quaiboatnidar
-        m_MethodName: SetBackForwardPercent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6711930781256676810}
-        m_TargetAssemblyTypeName: BoatPercentRelayMono, be.elab.quaiboatnidar
-        m_MethodName: SetPercent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &684499652994103558
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,13 +348,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2434940640986243913}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2034102780969075113}
-  m_Father: {fileID: 5354444741751607796}
+  m_Father: {fileID: 3052988825583652056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4886561549762619103
 GameObject:
@@ -345,7 +388,7 @@ Transform:
   m_Children:
   - {fileID: 6084920678910294155}
   - {fileID: 1138855391313608370}
-  m_Father: {fileID: 5354444741751607796}
+  m_Father: {fileID: 3052988825583652056}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &6166414174174485982
 MonoBehaviour:
@@ -408,14 +451,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1065, y: 0, z: 2.33}
-  m_LocalScale: {x: 5.7259274, y: 5.7259274, z: 5.7259274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8202830902864080924}
-  - {fileID: 3178830570468044410}
+  - {fileID: 3884106826537334623}
+  - {fileID: 3052988825583652056}
   - {fileID: 5276151925970071881}
   - {fileID: 4748523564616587914}
-  - {fileID: 8500111454949727054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5413261748154430741
@@ -5400,7 +5442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5276151925970071881
 Transform:
   m_ObjectHideFlags: 0
@@ -5519,6 +5561,100 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &7208024184960258661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571622989358060056}
+  - component: {fileID: 3278849560724252072}
+  m_Layer: 0
+  m_Name: Default Input
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1571622989358060056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208024184960258661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4748523564616587914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3278849560724252072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208024184960258661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003125c41cb2b5e4084cdec5576d90db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_moveBackForward: {fileID: -2419849938971563028, guid: 622899127b9dfba40a6cdb472acc71db,
+    type: 3}
+  m_rotateLeftRight: {fileID: -2765067249112102939, guid: 622899127b9dfba40a6cdb472acc71db,
+    type: 3}
+  m_singleJoystick: {fileID: -2390161907115449621, guid: 622899127b9dfba40a6cdb472acc71db,
+    type: 3}
+  m_percentBackForward11: 0
+  m_percentRotateLeftRight11: 0
+  m_onLeftRightPercentChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 666060255019998965}
+        m_TargetAssemblyTypeName: MoveBoatMono, be.elab.quaiboatnidar
+        m_MethodName: SetLeftRightPercent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onBackForwardPercentChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 666060255019998965}
+        m_TargetAssemblyTypeName: MoveBoatMono, be.elab.quaiboatnidar
+        m_MethodName: SetBackForwardPercent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6711930781256676810}
+        m_TargetAssemblyTypeName: BoatPercentRelayMono, be.elab.quaiboatnidar
+        m_MethodName: SetPercent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7802840544212651251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,7 +5679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7802840544212651251}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5551,6 +5687,40 @@ Transform:
   - {fileID: 1123079383279410088}
   - {fileID: 4357858858173551506}
   - {fileID: 774497017421662165}
+  m_Father: {fileID: 3052988825583652056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8124803444984601124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3052988825583652056}
+  m_Layer: 0
+  m_Name: Size
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3052988825583652056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124803444984601124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.7187, y: 6.7187, z: 6.7187}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8202830902864080924}
+  - {fileID: 3178830570468044410}
+  - {fileID: 8500111454949727054}
   m_Father: {fileID: 5354444741751607796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8171466919209089206

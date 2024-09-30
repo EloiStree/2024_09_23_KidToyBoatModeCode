@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MoveBoatMono : MonoBehaviour
 {
 
@@ -16,6 +17,23 @@ public class MoveBoatMono : MonoBehaviour
     public float m_percentBackForward;
 
 
+    public AnimationCurve m_rotationFromSpeedPercent;
+
+    public void Reset()
+    {
+        m_whatToMove = transform;
+        m_rotationFromSpeedPercent = new AnimationCurve()
+            {
+            keys = new Keyframe[]
+            {
+                new Keyframe(0, 0),
+                new Keyframe(1, 1)
+            }
+        };
+    }
+
+
+
     public void SetLeftRightPercent(float percent)
     {
         m_percentLeftRight = percent;
@@ -25,10 +43,6 @@ public class MoveBoatMono : MonoBehaviour
         m_percentBackForward = percent;
     }
 
-    private void Reset()
-    {
-        m_whatToMove = transform;
-    }
 
     void Update()
     {
@@ -39,10 +53,9 @@ public class MoveBoatMono : MonoBehaviour
             moveSpeed = m_moveBackwardSpeed;
         }
 
-        float percentRotation = m_percentLeftRight * m_percentBackForward;
-        if (Mathf.Abs(percentRotation) < 0.1f) {
-            percentRotation = 0;
-        }
+        
+        float percentRotation = m_rotationFromSpeedPercent.Evaluate(Mathf.Abs(m_percentBackForward)) *m_percentLeftRight;
+        
         m_whatToMove.Translate( Vector3.forward * moveSpeed * m_percentBackForward * Time.deltaTime);
         m_whatToMove.Rotate( Vector3.up * m_rotateSpeed  * percentRotation * Time.deltaTime);
     }
