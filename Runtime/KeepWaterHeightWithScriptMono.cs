@@ -9,7 +9,7 @@ public class KeepWaterHeightWithScriptMono : MonoBehaviour
     public Rigidbody m_rigidbodyToAffect;
     public float m_heightAdjustement = 0.01f;
 
-    void Update()
+    void LateUpdate()
     {
         if (m_whatToAffect.position.y < m_waterWorldLevel.position.y)
         {
@@ -17,14 +17,14 @@ public class KeepWaterHeightWithScriptMono : MonoBehaviour
             position.y = m_waterWorldLevel.position.y+ m_heightAdjustement;
             m_whatToAffect.position = position;
 
-            Vector3 velocity = m_rigidbodyToAffect.velocity;
+            Vector3 velocity = m_rigidbodyToAffect.linearVelocity;
             if(velocity.y < 0)
             {
                 velocity.y = 0;
-                m_rigidbodyToAffect.velocity = velocity;
+                m_rigidbodyToAffect.linearVelocity = velocity;
             }
             velocity.y = 0.01f;
-            m_rigidbodyToAffect.velocity = velocity;
+            m_rigidbodyToAffect.linearVelocity = velocity;
         }
 
     }
