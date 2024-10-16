@@ -17,7 +17,14 @@ public class KeepWaterHeightWithScriptMono : MonoBehaviour
             position.y = m_waterWorldLevel.position.y+ m_heightAdjustement;
             m_whatToAffect.position = position;
 
-            Vector3 velocity = m_rigidbodyToAffect.linearVelocity;
+            Vector3 velocity = Vector3.zero;
+
+            #if UNITY_6000_0_OR_NEWER
+                velocity = m_rigidbodyToAffect.linearVelocity;
+            #else
+                velocity = m_rigidbodyToAffect.velocity;
+            #endif
+
             if(velocity.y < 0)
             {
                 velocity.y = 0;
