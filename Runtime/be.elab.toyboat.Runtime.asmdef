@@ -1,5 +1,5 @@
 {
-    "name": "be.elab.quaiboatnidar",
+    "name": "be.elab.toyboat",
     "rootNamespace": "",
     "references": [
         "Unity.InputSystem"

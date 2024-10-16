@@ -16,7 +16,7 @@ public class CantBeDownTeleporterMono : MonoBehaviour
         if(m_whatToObserve.position.y< m_whatItDown)
             {
             m_whatToObserve.position = m_savePoint.position; 
-            m_whatToAffect.velocity = Vector3.zero;
+            m_whatToAffect.linearVelocity = Vector3.zero;
         }
 
     }
