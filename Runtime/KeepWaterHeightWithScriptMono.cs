@@ -19,15 +19,25 @@ public class KeepWaterHeightWithScriptMono : MonoBehaviour
 
             Vector3 velocity = Vector3.zero;
 
-                velocity = m_rigidbodyToAffect.velocity;
-        
-            if(velocity.y < 0)
+#if UNITY_6000_0_OR_NEWER
+            velocity= m_rigidbodyToAffect.linearVelocity ;
+#else
+           velocity = m_rigidbodyToAffect.velocity ;
+#endif
+
+            if (velocity.y < 0)
             {
                 velocity.y = 0;
-                m_rigidbodyToAffect.linearVelocity = velocity;
             }
             velocity.y = 0.01f;
+      
+#if UNITY_6000_0_OR_NEWER
             m_rigidbodyToAffect.linearVelocity = velocity;
+#else
+
+           m_rigidbodyToAffect.velocity = velocity;
+#endif
+
         }
 
     }
